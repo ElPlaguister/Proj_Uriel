@@ -2,11 +2,11 @@ import random
 import json
 import torch
 from model import NeuralNet
-from main import bag_of_words, tokenize
+from nltk_utils import bag_of_words, tokenize
 
 device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
 
-with open('intents.json', 'r') as f:
+with open('intents_en.json', 'r') as f:
     intents = json.load(f)
 
 FILE = 'data.pth'
